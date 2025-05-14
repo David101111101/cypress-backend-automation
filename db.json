@@ -13,10 +13,16 @@
       "email": "ana@platzi.com"
     },
     {
+      "id": "3",
       "first_name": "Javier",
       "last_name": "Pool",
-      "email": "javier@platzi.com",
-      "id": "3"
+      "email": "javier@platzi.com"
+    },
+    {
+      "id": "4",
+      "first_name": "Javier",
+      "last_name": "Pool",
+      "email": "javier@platzi.com"
     }
   ]
 }
