@@ -27,7 +27,7 @@ cy.get("#title").type("Test")
 
 
 
-it.only('should navigate in 2 domains in the same test', () => {
+it.skip('should navigate in 2 domains in the same test', () => {
     cy.visit('https://todo-cypress-iota.vercel.app');
             cy.get('h1').first().invoke('text').then((text) => {
                 // Useing cypress .env to store the text variable
@@ -45,6 +45,27 @@ it.only('should navigate in 2 domains in the same test', () => {
         cy.visit('/');
 
 });
+
+
+it.only("should save data in a variable using plugin from cypress.config", () => {
+    // Visit the first domain and get the text of the h1 element
+    cy.visit("/");
+    cy.get("p").first().invoke("text").then((text) => {
+        // Save the text in a variable using a custom task
+        cy.task("save", { texto : text });
+        console.log("Texto guardado:", text);
+    });
+
+});
+
+it.only("should get data from the plugin and use it in multiple tests",function () {
+    cy.visit("https://todo-cypress-iota.vercel.app");
+
+        cy.task("getInfo", "texto").then((values) => {
+            cy.get("#title").type(values);
+        });
+});
+
 
 
 });
