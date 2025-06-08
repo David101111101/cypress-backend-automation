@@ -28,6 +28,9 @@ cy.get("#title").type("Test")
 
 
 it.skip('should navigate in 2 domains in the same test', () => {
+
+it.only('should navigate in 2 domains in the same test', () => {
+
     cy.visit('https://todo-cypress-iota.vercel.app');
             cy.get('h1').first().invoke('text').then((text) => {
                 // Useing cypress .env to store the text variable
@@ -45,6 +48,7 @@ it.skip('should navigate in 2 domains in the same test', () => {
         cy.visit('/');
 
 });
+
 
 
 it.only("should save data in a variable using plugin from cypress.config", () => {
