@@ -37,6 +37,7 @@ module.exports = defineConfig({
       "**/2-advanced-examples/*.js",
     ],
     baseUrl: "http://localhost:3000",
+    experimentalSessionAndOrigin: true,
     viewportWidth: 1280,
     viewportHeight: 720,
   },
