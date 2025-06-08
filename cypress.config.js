@@ -1,5 +1,7 @@
 const { defineConfig } = require("cypress");
 const mysql = require("mysql2"); 
+const values = {};
+
 
 module.exports = defineConfig({
   e2e: {
@@ -27,9 +29,39 @@ module.exports = defineConfig({
             });
           });
         },
-      });
 
-      return config;
+
+    
+
+
+
+
+
+
+
+
+     
+
+      
+
+
+      // Custom task plugin to save data in a variable and use it in multiple tests
+          save(textvariable){
+            const key = Object.keys(textvariable)[0];
+            values[key] = textvariable[key];
+            return null;
+          },
+          getInfo(key) {
+            console.log('getInfo called with key:', values);
+              return values[key] ?? "There's no value"
+               
+          }        
+        
+    
+
+        
+     });
+     return config;
     },
 
     excludeSpecPattern: [
