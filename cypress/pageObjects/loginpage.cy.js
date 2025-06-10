@@ -1,15 +1,15 @@
  export default class LoginWebPage {
   constructor() {
-    this.URL = 'https://zero.webappsecurity.com/login.html';
-    this.userInput = '#user_login';
-    this.passwordInput = '#user_password';
-    this.loginButton = '#login_form > div.form-actions > input';
+    this.URL = 'https://practicetestautomation.com/practice-test-login/';
+    this.userInput = '#username';
+    this.passwordInput = '#password';
+    this.loginButton = '#submit';
     this.tabs = {
-      account_summary_tab: '#account_summary_tab',
-      account_activity_tab: '#account_activity_tab',
-      transfer_founds_tab: '#transfer_funds_tab',
+      account_summary_tab: '#menu-item-20 > a',
+      account_activity_tab: '#menu-item-21 > a',
+      transfer_founds_tab: '#menu-item-19 > a',
     };
-    this.error = '.alert.alert-error';
+    this.error = '#error';
   }
 
   visit() {

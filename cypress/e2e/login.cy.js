@@ -1,10 +1,12 @@
 
-import LoginWebPage from '../pageObjects/loginpage'; //import del POM
-const loginData = require('../fixtures/loginData'); //data guardada
+import LoginWebPage from '../pageObjects/loginpage.cy.js'; //imports POM
 
-let loginWebPage, data;
 
-describe('Test de Login', () => {
+
+describe.skip('Test de Login', () => {
+  let loginWebPage, data;
+  const loginData = require('../fixtures/loginData'); //saved data 
+
   beforeEach(() => {
     loginWebPage = new LoginWebPage();
     loginWebPage.visit();
@@ -21,3 +23,75 @@ describe('Test de Login', () => {
     loginWebPage.validateSuccessfulLogin();
   });
 });
+
+
+describe.skip("Loging with Fixtures", () => {
+  let loginWebPage;
+  beforeEach(()  => {
+    loginWebPage = new LoginWebPage();
+    loginWebPage.visit();
+  });
+
+
+  it("LogIn using fixtures variables", ()  => {
+  
+        cy.fixture("credentials").then(credentials => {
+          loginWebPage.doLogin(credentials.username, credentials.password);
+        });
+        loginWebPage.validateSuccessfulLogin()
+  });
+
+  it("Incorrect LogIn with fixtures", ()  => {
+    
+        cy.fixture("incorrectCredentials").then(credentials => {
+          loginWebPage.doLogin(credentials.username, credentials.password);
+        });
+        loginWebPage.isErrorDisplayed()
+  });
+
+
+
+  it("Multiple log ins using an object", ()  => {
+    
+        cy.fixture("incorrectCredentials").then(credentials => {
+          loginWebPage.doLogin(credentials.username, credentials.password);
+        });
+        loginWebPage.isErrorDisplayed()
+  });
+
+
+
+
+
+});
+
+const cretentialsObjectForLogIn = [
+{
+    name: "credentials",
+    title: "Correct Log In"
+},
+{
+    name: "incorrectCredentials",
+    title: "Incorrect Log In"
+}
+]
+
+cretentialsObjectForLogIn.forEach(credentials => {
+  let loginWebPage = new LoginWebPage();
+  describe.only(credentials.title, () => {
+    
+      beforeEach(() => {
+        loginWebPage.visit();
+      });
+
+      it("logging in with multiple fixtures", function() {
+        loginWebPage.isLoadPage();
+        cy.fixture(credentials.name).then(credentials => {
+          loginWebPage.doLogin(credentials.username, credentials.password);
+        });
+      })
+
+
+  })
+
+})
