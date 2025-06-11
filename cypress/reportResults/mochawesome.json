@@ -1,0 +1,339 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-06-10T04:09:14.659Z",
+    "end": "2025-06-10T04:27:11.683Z",
+    "duration": 1077024
+  },
+  "results": [
+    {
+      "uuid": "bc5ffa0c-cb92-479b-8bf7-8d29ccf30483",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6fcba45b-8e11-4b19-a504-3f0e5896ebaa",
+          "title": "Correct Log In",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logging in with multiple fixtures",
+              "fullTitle": "Correct Log In logging in with multiple fixtures",
+              "timedOut": null,
+              "duration": 3355,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginWebPage.isLoadPage();\ncy.fixture(credentials.name).then(credentials => {\n  loginWebPage.doLogin(credentials.username, credentials.password);\n});",
+              "err": {},
+              "uuid": "92731ccb-54a7-4013-8ba5-e3304f6a81e8",
+              "parentUUID": "6fcba45b-8e11-4b19-a504-3f0e5896ebaa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "92731ccb-54a7-4013-8ba5-e3304f6a81e8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3355,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "3e8b6182-7d9a-44ae-84f1-4fc2198cb075",
+          "title": "Incorrect Log In",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logging in with multiple fixtures",
+              "fullTitle": "Incorrect Log In logging in with multiple fixtures",
+              "timedOut": null,
+              "duration": 1474,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginWebPage.isLoadPage();\ncy.fixture(credentials.name).then(credentials => {\n  loginWebPage.doLogin(credentials.username, credentials.password);\n});",
+              "err": {},
+              "uuid": "2967e836-6dd2-4a44-8176-823a1e144a7c",
+              "parentUUID": "3e8b6182-7d9a-44ae-84f1-4fc2198cb075",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2967e836-6dd2-4a44-8176-823a1e144a7c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1474,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "00790ef4-aa1e-4316-9d0c-1236cb0be1f2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "81e5c568-8b96-415e-a60a-67c12e0bf429",
+          "title": "Correct Log In",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logging in with multiple fixtures",
+              "fullTitle": "Correct Log In logging in with multiple fixtures",
+              "timedOut": null,
+              "duration": 24039,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginWebPage.isLoadPage();\ncy.fixture(credentials.name).then(credentials => {\n  loginWebPage.doLogin(credentials.username, credentials.password);\n});",
+              "err": {},
+              "uuid": "477c8a84-cd68-40ec-b4f7-a44557d2232f",
+              "parentUUID": "81e5c568-8b96-415e-a60a-67c12e0bf429",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "477c8a84-cd68-40ec-b4f7-a44557d2232f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 24039,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "12da1f24-f809-40e6-8bfe-10e6a43502fa",
+          "title": "Incorrect Log In",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logging in with multiple fixtures",
+              "fullTitle": "Incorrect Log In logging in with multiple fixtures",
+              "timedOut": null,
+              "duration": 1342,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginWebPage.isLoadPage();\ncy.fixture(credentials.name).then(credentials => {\n  loginWebPage.doLogin(credentials.username, credentials.password);\n});",
+              "err": {},
+              "uuid": "d2a0c4a0-7ba9-425a-bd86-f95e1400a3de",
+              "parentUUID": "12da1f24-f809-40e6-8bfe-10e6a43502fa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d2a0c4a0-7ba9-425a-bd86-f95e1400a3de"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1342,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8c0f01a2-636d-4ed8-b04e-42efb8f47876",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bdc6c236-934a-48c7-8437-f7411182e356",
+          "title": "Correct Log In",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logging in with multiple fixtures",
+              "fullTitle": "Correct Log In logging in with multiple fixtures",
+              "timedOut": null,
+              "duration": 4439,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginWebPage.isLoadPage();\ncy.fixture(credentials.name).then(credentials => {\n  loginWebPage.doLogin(credentials.username, credentials.password);\n});",
+              "err": {},
+              "uuid": "46e91773-14e1-4e63-93de-7a5cd301a6eb",
+              "parentUUID": "bdc6c236-934a-48c7-8437-f7411182e356",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "46e91773-14e1-4e63-93de-7a5cd301a6eb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4439,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "ffe86b4c-de57-407a-9d34-42167176588a",
+          "title": "Incorrect Log In",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logging in with multiple fixtures",
+              "fullTitle": "Incorrect Log In logging in with multiple fixtures",
+              "timedOut": null,
+              "duration": 1234,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginWebPage.isLoadPage();\ncy.fixture(credentials.name).then(credentials => {\n  loginWebPage.doLogin(credentials.username, credentials.password);\n});",
+              "err": {},
+              "uuid": "260dba24-0334-43e0-8c2f-5613e53cf3a8",
+              "parentUUID": "ffe86b4c-de57-407a-9d34-42167176588a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "260dba24-0334-43e0-8c2f-5613e53cf3a8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1234,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/mochareports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

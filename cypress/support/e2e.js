@@ -14,4 +14,7 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
+
+//To use Allure reporter with Cypress
+import "allure-cypress";
