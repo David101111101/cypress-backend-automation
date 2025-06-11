@@ -58,13 +58,10 @@ describe.skip("Loging with Fixtures", () => {
         });
         loginWebPage.isErrorDisplayed()
   });
-
-
-
-
-
 });
 
+
+// This test suite is for logging in using different credentials stored in fixtures
 const cretentialsObjectForLogIn = [
 {
     name: "credentials",
@@ -86,6 +83,7 @@ cretentialsObjectForLogIn.forEach(credentials => {
 
       it("logging in with multiple fixtures", function() {
         loginWebPage.isLoadPage();
+        
         cy.fixture(credentials.name).then(credentials => {
           loginWebPage.doLogin(credentials.username, credentials.password);
         });

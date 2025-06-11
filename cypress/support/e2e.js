@@ -18,3 +18,5 @@ import './commands';
 
 //To use Allure reporter with Cypress
 import "allure-cypress";
+
+

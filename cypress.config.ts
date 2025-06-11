@@ -1,6 +1,10 @@
 import { defineConfig } from "cypress";
+// Importing the Allure plugin for Cypress html reports and screenshots
 import { allureCypress } from "allure-cypress/reporter";
-const mysql = require("mysql2"); 
+
+// Importing MySQL library to handle database connections
+import mysql from "mysql2";
+
 const values = {};
 
 
@@ -9,9 +13,13 @@ export default defineConfig({
  // reporterOptions: {
  //   configFile: "reporter-config.json",
  // },
+
   e2e: {
     setupNodeEvents: (on, config) => {
-      allureCypress(on, config);
+      allureCypress(on, config, {
+        resultsDir: "allure-results",
+      });
+      // Custom task plugin to query the database
       on("task", {
         queryDb({ query }) {
           const connection = mysql.createConnection({
@@ -69,13 +77,14 @@ export default defineConfig({
      });
      return config;
     },
-
+    env: {
+    allureReuseAfterSpec: true
+    },
     excludeSpecPattern: [
       "**/1-getting-started/*.js",
       "**/2-advanced-examples/*.js",
     ],
     baseUrl: "http://localhost:3000",
-    experimentalSessionAndOrigin: true,
     viewportWidth: 1280,
     viewportHeight: 720,
   },
