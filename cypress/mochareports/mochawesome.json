@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-10T04:09:14.659Z",
+    "end": "2025-06-10T04:09:22.919Z",
+    "duration": 8260,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8c0f01a2-636d-4ed8-b04e-42efb8f47876",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bdc6c236-934a-48c7-8437-f7411182e356",
+          "title": "Correct Log In",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logging in with multiple fixtures",
+              "fullTitle": "Correct Log In logging in with multiple fixtures",
+              "timedOut": null,
+              "duration": 4439,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginWebPage.isLoadPage();\ncy.fixture(credentials.name).then(credentials => {\n  loginWebPage.doLogin(credentials.username, credentials.password);\n});",
+              "err": {},
+              "uuid": "46e91773-14e1-4e63-93de-7a5cd301a6eb",
+              "parentUUID": "bdc6c236-934a-48c7-8437-f7411182e356",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "46e91773-14e1-4e63-93de-7a5cd301a6eb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4439,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "ffe86b4c-de57-407a-9d34-42167176588a",
+          "title": "Incorrect Log In",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logging in with multiple fixtures",
+              "fullTitle": "Incorrect Log In logging in with multiple fixtures",
+              "timedOut": null,
+              "duration": 1234,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginWebPage.isLoadPage();\ncy.fixture(credentials.name).then(credentials => {\n  loginWebPage.doLogin(credentials.username, credentials.password);\n});",
+              "err": {},
+              "uuid": "260dba24-0334-43e0-8c2f-5613e53cf3a8",
+              "parentUUID": "ffe86b4c-de57-407a-9d34-42167176588a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "260dba24-0334-43e0-8c2f-5613e53cf3a8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1234,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/mochareports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

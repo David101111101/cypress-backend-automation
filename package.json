@@ -4,7 +4,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "runServer": "json-server --watch db.json"
+    "runServer": "json-server --watch db.json",
+    "delete:results": "rimraf -r cypress/reportResults/* || true",
+    "report": "cypress run --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json",
+    "mochawesome:report": "npx mochawesome-merge cypress/mochareports/*.json -o cypress/reportResults/mochawesome.json && npx mochawesome-report-generator cypress/reportResults/mochawesome.json -o cypress/reportResults/",
+    "junit:reports": "npx junit-report-merger cypress/reportResults/results-*.xml -o cypress/reportResults/merged-results.xml",
+    "test:allure": "cypress run --env allure=true"
   },
   "keywords": [],
   "author": "",
@@ -12,13 +17,20 @@
   "type": "commonjs",
   "description": "",
   "devDependencies": {
+    "allure-cypress": "^3.2.2",
     "cypress": "^14.3.3",
     "json-server": "^1.0.0-beta.3",
+    "mocha-junit-reporter": "^2.2.1",
     "mysql2": "^3.14.1",
     "prettier": "^3.5.3"
   },
   "dependencies": {
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "cypress-multi-reporters": "^2.0.5",
     "cypress-mysql": "^1.0.4",
-    "dotenv": "^16.5.0"
+    "dotenv": "^16.5.0",
+    "junit-report-merger": "^7.0.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0"
   }
 }

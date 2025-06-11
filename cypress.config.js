@@ -1,11 +1,17 @@
-const { defineConfig } = require("cypress");
+import { defineConfig } from "cypress";
+import { allureCypress } from "allure-cypress/reporter";
 const mysql = require("mysql2"); 
 const values = {};
 
 
-module.exports = defineConfig({
+export default defineConfig({
+ // reporter: "cypress-multi-reporters",
+ // reporterOptions: {
+ //   configFile: "reporter-config.json",
+ // },
   e2e: {
-    setupNodeEvents(on, config) {
+    setupNodeEvents: (on, config) => {
+      allureCypress(on, config);
       on("task", {
         queryDb({ query }) {
           const connection = mysql.createConnection({
