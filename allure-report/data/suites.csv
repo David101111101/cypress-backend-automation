@@ -1,3 +1,6 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","4424","logging in with multiple fixtures","Correct Log In","Wed Jun 11 01:09:46 GMT-05:00 2025","passed","Wed Jun 11 01:09:50 GMT-05:00 2025","","","",""
-"","1398","logging in with multiple fixtures","Incorrect Log In","Wed Jun 11 01:09:51 GMT-05:00 2025","passed","Wed Jun 11 01:09:52 GMT-05:00 2025","","","",""
+"","371","Repaso de request","Interceptando network requests","Thu Jun 12 02:26:52 GMT-05:00 2025","passed","Thu Jun 12 02:26:53 GMT-05:00 2025","","","",""
+"","117","Validar el body","Probando el Body","Thu Jun 12 02:26:59 GMT-05:00 2025","passed","Thu Jun 12 02:26:59 GMT-05:00 2025","","","",""
+"","3978","logging in with multiple fixtures","Correct Log In","Thu Jun 12 02:28:23 GMT-05:00 2025","passed","Thu Jun 12 02:28:27 GMT-05:00 2025","","","",""
+"","4463","Prueba de intercept simple","Interceptando network requests","Thu Jun 12 02:26:53 GMT-05:00 2025","failed","Thu Jun 12 02:26:57 GMT-05:00 2025","","","",""
+"","1603","logging in with multiple fixtures","Incorrect Log In","Thu Jun 12 02:28:27 GMT-05:00 2025","passed","Thu Jun 12 02:28:28 GMT-05:00 2025","","","",""
