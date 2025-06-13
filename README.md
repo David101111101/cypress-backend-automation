@@ -15,9 +15,18 @@ npx cypress run --spec "cypress/e2e/login.cy.js" && allure generate allure-resul
 //only runs the test
 npx cypress run --spec "cypress/e2e/login.cy.js"
 
-//generates the html allure report:
+//generates the html allure report by runing ALL tests!:
 npm run allure:report
 
+
+
+//Runs the tests through docker
+
+docker compose up --build
+
+
+
+docker run --rm cypress-automation-docker
 
 
 
