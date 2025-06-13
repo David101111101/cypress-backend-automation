@@ -5,6 +5,7 @@ const mysql = require("mysql2");
 const values = {};
 
 module.exports = defineConfig({
+   projectId: "b2q8rf",
   e2e: {
     setupNodeEvents: (on, config) => {
       // Setup Allure plugin
@@ -60,8 +61,8 @@ module.exports = defineConfig({
       "**/2-advanced-examples/*.js",
     ],
 
-   // baseUrl: "http://localhost:3000",
-   baseUrl: " http://host.docker.internal:3000",
+   baseUrl: "https://localhost:3000",
+    //baseUrl: " https://host.docker.internal:3000",
     viewportWidth: 1280,
     viewportHeight: 720,
   },
