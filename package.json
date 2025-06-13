@@ -11,7 +11,8 @@
     "junit:reports": "npx junit-report-merger cypress/reportResults/results-*.xml -o cypress/reportResults/merged-results.xml",
    "allure:report": "npx cypress run --env allure=true && allure generate allure-results --clean -o allure-report",
   "allure:serve": "allure open allure-report",
-  "allure:serve:docker": "allure serve dockerReports"
+  "allure:serve:docker": "allure serve dockerReports",
+  "run:dashboard": "npx cypress run --spec "cypress/e2e/login.cy.js" --record --key 3f27aba8-3674-4c1b-bec9-82a288630e0a"
   },
   "keywords": [],
   "author": "",
